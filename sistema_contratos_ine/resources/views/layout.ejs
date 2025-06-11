@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= typeof title != 'undefined' ? title : 'Sistema de Contratos INE' %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Gestión de Contratos de Confidencialidad INE</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/contratos">Ver Contratos</a></li>
+                <li><a href="/contratos/nuevo">Nuevo Contrato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <%- body %>
+    </main>
+    <footer>
+        <p>&copy; 2024 INE. Todos los derechos reservados.</p>
+    </footer>
+    <script src="/js/main.js"></script>
+</body>
+</html>

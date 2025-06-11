@@ -1,0 +1,42 @@
+<% layout('layout') -%>
+
+<h2>Registrar Nuevo Contrato de Confidencialidad</h2>
+
+<form id="newContractForm">
+    <h3>Datos del Contratado</h3>
+    <label for="cedula_identidad">Cédula de Identidad (V-XXXXXXXX):</label>
+    <input type="text" id="cedula_identidad" name="cedula_identidad" required><br><br>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" required><br><br>
+
+    <label for="nacionalidad">Nacionalidad:</label>
+    <input type="text" id="nacionalidad" name="nacionalidad" value="Venezolana" required><br><br>
+
+    <label for="mayor_edad">Mayor de Edad:</label>
+    <input type="checkbox" id="mayor_edad" name="mayor_edad" checked><br><br>
+
+    <label for="domicilio">Domicilio:</label>
+    <input type="text" id="domicilio" name="domicilio" required><br><br>
+
+    <label for="cargo">Cargo:</label>
+    <input type="text" id="cargo" name="cargo" required><br><br>
+
+    <label for="adscripcion_ine">Adscripción al INE:</label>
+    <input type="text" id="adscripcion_ine" name="adscripcion_ine" required><br><br>
+
+    <label for="huella_dactilar_hash">Hash Huella Dactilar (opcional):</label>
+    <input type="text" id="huella_dactilar_hash" name="huella_dactilar_hash"><br><br>
+
+    <h3>Datos del Contrato</h3>
+    <label for="fecha_firma">Fecha de Firma:</label>
+    <input type="date" id="fecha_firma" name="fecha_firma" required><br><br>
+
+    <label for="url_documento_digital">URL Documento Digital (simulado, en real sería una carga):</label>
+    <input type="text" id="url_documento_digital" name="url_documento_digital" value="/storage/contracts/ejemplo.pdf" required><br><br>
+
+    <button type="submit">Registrar Contrato</button>
+</form>

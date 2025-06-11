@@ -1,0 +1,36 @@
+<% layout('layout') -%>
+
+<h2>Listado de Contratos</h2>
+
+<% if (contratos && contratos.length > 0) { %>
+    <table>
+        <thead>
+            <tr>
+                <th>ID Contrato</th>
+                <th>Cédula Contratado</th>
+                <th>Nombre Contratado</th>
+                <th>Fecha Firma</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% contratos.forEach(contrato => { %>
+                <tr>
+                    <td><%= contrato.id_contrato %></td>
+                    <td><%= contrato.cedula_identidad %></td>
+                    <td><%= contrato.nombre %> <%= contrato.apellido %></td>
+                    <td><%= new Date(contrato.fecha_firma).toLocaleDateString('es-VE') %></td>
+                    <td><%= contrato.estado_contrato %></td>
+                    <td>
+                        <a href="<%= contrato.url_documento_digital %>" target="_blank">Ver PDF</a>
+                        </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+<% } else { %>
+    <p>No hay contratos registrados aún.</p>
+<% } %>
+
+<a href="/contratos/nuevo" class="button">Crear Nuevo Contrato</a>
